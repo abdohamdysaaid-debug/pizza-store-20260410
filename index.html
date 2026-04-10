@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بيتز بابس | متجر البيتزا والمكرونة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand-badge">PZ</span>
+          <div>
+            <h1>بيتز بابس</h1>
+            <p>متجر متكامل لطلب البيتزا والمكرونة بسرعة وسهولة</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a class="outline-link" href="#store-info">عنوان المحل</a>
+          <a class="cart-shortcut" href="#cart">السلة <span id="cart-count">0</span></a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">أفضل عروض اليوم</span>
+          <h2>كل اللي تحتاجه لطلبك من مكان واحد</h2>
+          <p>
+            اختر من قسم البيتزا أو قسم المكرونات، أضف الطلبات إلى السلة، ثم أدخل العنوان وبيانات التواصل لتأكيد الطلب
+            خلال ثوانٍ.
+          </p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">ابدأ الطلب</a>
+            <a href="#checkout" class="btn btn-secondary">أدخل العنوان</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="stat">
+            <strong>12 صنف</strong>
+            <span>بيتزا ومكرونة جاهزين للطلب</span>
+          </div>
+          <div class="stat">
+            <strong>30 دقيقة</strong>
+            <span>متوسط التوصيل داخل المنطقة</span>
+          </div>
+          <div class="stat">
+            <strong>دفع مرن</strong>
+            <span>كاش عند الاستلام أو فودافون كاش</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="store-info" class="info-strip">
+      <div class="info-card">
+        <span>العنوان</span>
+        <strong>شارع النصر، مدينة نصر، القاهرة</strong>
+      </div>
+      <div class="info-card">
+        <span>مواعيد العمل</span>
+        <strong>يوميًا من 12 ظهرًا حتى 1 بعد منتصف الليل</strong>
+      </div>
+      <div class="info-card">
+        <span>التوصيل</span>
+        <strong>داخل القاهرة والجيزة مع تتبع سريع للطلب</strong>
+      </div>
+    </section>
+
+    <main class="layout">
+      <section id="menu" class="menu-panel">
+        <div class="section-heading">
+          <span>القائمة</span>
+          <h3>اختر من الأقسام</h3>
+        </div>
+
+        <div class="promo-banner">
+          <div>
+            <strong>عرض كومبو</strong>
+            <p>اطلب 2 بيتزا عائلية واحصل على خصم 15% على طبق مكرونة</p>
+          </div>
+          <span>خصم اليوم</span>
+        </div>
+
+        <div class="category-block">
+          <div class="category-title">
+            <h4>قسم البيتزا</h4>
+            <p>أنواع متنوعة من البيتزا الطازجة بخامات ممتازة</p>
+          </div>
+          <div class="cards-grid" id="pizza-list"></div>
+        </div>
+
+        <div class="category-block">
+          <div class="category-title">
+            <h4>قسم المكرونات</h4>
+            <p>أطباق مكرونة غنية بالصوص والجبن والإضافات الطازجة</p>
+          </div>
+          <div class="cards-grid" id="pasta-list"></div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <section id="cart" class="cart-panel">
+          <div class="section-heading compact">
+            <span>السلة</span>
+            <h3>طلباتك الحالية</h3>
+          </div>
+
+          <div id="cart-items" class="cart-items">
+            <p class="empty-state">السلة فارغة حاليًا، أضف أصنافك المفضلة للبدء.</p>
+          </div>
+
+          <div class="cart-summary">
+            <div class="summary-row">
+              <span>عدد القطع</span>
+              <strong id="cart-quantity">0</strong>
+            </div>
+            <div class="summary-row">
+              <span>الإجمالي</span>
+              <strong id="cart-total">0 جنيه</strong>
+            </div>
+            <button id="clear-cart" class="btn btn-secondary btn-block" type="button">تفريغ السلة</button>
+          </div>
+        </section>
+
+        <section id="checkout" class="checkout-panel">
+          <div class="section-heading compact">
+            <span>العنوان والتأكيد</span>
+            <h3>أكمل بيانات الطلب</h3>
+          </div>
+
+          <form id="checkout-form" class="checkout-form">
+            <label>
+              الاسم
+              <input type="text" id="customer-name" placeholder="اكتب اسمك" required>
+            </label>
+
+            <label>
+              رقم الهاتف
+              <input type="tel" id="customer-phone" placeholder="01xxxxxxxxx" required>
+            </label>
+
+            <label>
+              المنطقة
+              <input type="text" id="customer-area" placeholder="مثال: مدينة نصر" required>
+            </label>
+
+            <label>
+              العنوان بالتفصيل
+              <input type="text" id="customer-address" placeholder="الشارع، العمارة، الدور، الشقة" required>
+            </label>
+
+            <label>
+              طريقة الدفع
+              <select id="payment-method" required>
+                <option value="cash">الدفع عند الاستلام</option>
+                <option value="wallet">فودافون كاش</option>
+              </select>
+            </label>
+
+            <label>
+              ملاحظات الطلب
+              <textarea id="order-notes" rows="4" placeholder="مثال: بدون بصل، اتصل قبل الوصول"></textarea>
+            </label>
+
+            <button type="submit" class="btn btn-primary btn-block">تأكيد الطلب</button>
+          </form>
+
+          <div id="order-message" class="order-message" aria-live="polite"></div>
+          <div id="order-summary" class="order-summary hidden"></div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

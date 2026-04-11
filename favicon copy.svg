@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Pub's Pizza">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff9d2f"/>
+      <stop offset="100%" stop-color="#ff7a00"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="#101010"/>
+  <circle cx="64" cy="64" r="44" fill="url(#bg)"/>
+  <path d="M30 74c8-19 25-31 44-31 12 0 23 5 31 13-7 11-17 16-31 16-11 0-23 1-44 2Z" fill="#fff2e6" opacity="0.95"/>
+  <circle cx="51" cy="57" r="5" fill="#c73a0d"/>
+  <circle cx="69" cy="51" r="5" fill="#c73a0d"/>
+  <circle cx="81" cy="63" r="5" fill="#c73a0d"/>
+  <text x="64" y="109" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="22" fill="#fff">PP</text>
+</svg>

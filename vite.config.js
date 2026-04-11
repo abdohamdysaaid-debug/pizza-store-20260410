@@ -2,5 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: './', 
+  base: '/pizza-store-20260410/',
+  plugins: [react()],
 })

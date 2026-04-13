@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app'
 import { addDoc, collection, getDocs, getFirestore, orderBy, query, serverTimestamp } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBPqK5E0kRTgPSto2Yy9FYlKjk_2wx9a8k",
-  authDomain: "pizza-pubs.firebaseapp.com",
-  projectId: "pizza-pubs",
-  storageBucket: "pizza-pubs.firebasestorage.app",
-  messagingSenderId: "543825814867",
-  appId: "1:543825814867:web:02439ea19db92aa9c42da6"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 }
 
 let firestoreInstance = null

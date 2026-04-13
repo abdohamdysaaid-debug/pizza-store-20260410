@@ -33,8 +33,7 @@ function MenuCard({ item }) {
         <div>
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h3 className="text-xl font-black text-white">{item.name.en}</h3>
-              <p className="text-sm font-semibold text-orange-300">{item.name.ar}</p>
+              <h3 className="text-xl font-black text-white">{t(language, item.name)}</h3>
             </div>
             <div className="rounded-full bg-white/5 px-3 py-1 text-sm font-bold text-white/70">EGP {price}</div>
           </div>

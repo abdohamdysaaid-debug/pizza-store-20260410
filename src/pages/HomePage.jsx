@@ -1,4 +1,4 @@
-﻿import { ArrowRight, Flame, MapPin, Percent, Star, Truck, Clock3 } from 'lucide-react'
+﻿import { ArrowRight, Flame, MapPin, Star, Truck, Clock3 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import SectionHeader from '../components/shared/SectionHeader'
 import Seo from '../components/shared/Seo'
@@ -98,8 +98,7 @@ function HomePage() {
               <div className="space-y-3 p-5">
                 <div className="flex items-center justify-between gap-3">
                   <div>
-                    <h3 className="text-2xl font-black text-white">{item.name.en}</h3>
-                    <p className="text-sm font-semibold text-orange-300">{item.name.ar}</p>
+                    <h3 className="text-2xl font-black text-white">{t(language, item.name)}</h3>
                   </div>
                   <span className="rounded-full bg-orange-500 px-3 py-1 text-xs font-black text-neutral-950">{t(language, ui.labels.bestSeller)}</span>
                 </div>

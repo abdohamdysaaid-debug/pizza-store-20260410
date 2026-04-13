@@ -8,7 +8,10 @@ import MenuPage from './pages/MenuPage'
 import CheckoutPage from './pages/CheckoutPage'
 import ContactPage from './pages/ContactPage'
 import AdminPage from './pages/AdminPage'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AdminLoginPage from './pages/AdminLoginPage'
+import UserLoginPage from './pages/UserLoginPage'
+import ProtectedRoute from './components/ProtectedRoute'
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -21,7 +24,9 @@ function App() {
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/login" element={<UserLoginPage />} />
+          <Route path="/admin-login" element={<AdminLoginPage />} />
+          <Route path="/admin" element={<ProtectedRoute component={AdminPage} />} />
         </Routes>
       </main>
       <Footer />

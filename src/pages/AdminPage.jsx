@@ -1,7 +1,7 @@
 ﻿import { useMemo, useState } from 'react'
 import SectionHeader from '../components/shared/SectionHeader'
 import Seo from '../components/shared/Seo'
-import { t } from '../data/ui'
+import { t, ui } from '../data/ui'
 import { useStore } from '../context/StoreContext'
 
 function AdminPage() {
@@ -57,8 +57,7 @@ function AdminPage() {
             <article key={item.id} className="rounded-[1.5rem] border border-white/10 bg-neutral-950/60 p-4">
               <div className="mb-4 flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="font-black text-white">{item.name.en}</h3>
-                  <p className="text-sm text-orange-300">{item.name.ar}</p>
+                  <h3 className="font-black text-white">{t(language, item.name)}</h3>
                 </div>
                 <div className="flex gap-2 text-xs">
                   <button type="button" onClick={() => updateMenuItem(item.id, { bestSeller: !item.bestSeller })} className={`rounded-full px-3 py-1 font-bold ${item.bestSeller ? 'bg-orange-500 text-neutral-950' : 'bg-white/5 text-white/60'}`}>

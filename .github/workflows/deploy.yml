@@ -39,6 +39,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
+        env:
+          VITE_BASE_PATH: /pizza-store-20260410/
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5

@@ -10,18 +10,21 @@ function ensureMeta(name, attribute = 'name') {
   return element
 }
 
-function Seo({ title, description, image = '/pizza-store-20260410/favicon.svg' }) {
+function Seo({ title, description, image }) {
+  const defaultImage = `${import.meta.env.BASE_URL}favicon.svg`
+  const metaImage = image || defaultImage
+
   useEffect(() => {
     document.title = title
 
     ensureMeta('description').setAttribute('content', description)
     ensureMeta('og:title', 'property').setAttribute('content', title)
     ensureMeta('og:description', 'property').setAttribute('content', description)
-    ensureMeta('og:image', 'property').setAttribute('content', image)
+    ensureMeta('og:image', 'property').setAttribute('content', metaImage)
     ensureMeta('twitter:title').setAttribute('content', title)
     ensureMeta('twitter:description').setAttribute('content', description)
-    ensureMeta('twitter:image').setAttribute('content', image)
-  }, [description, image, title])
+    ensureMeta('twitter:image').setAttribute('content', metaImage)
+  }, [description, metaImage, title])
 
   return null
 }

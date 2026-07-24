@@ -1,4 +1,4 @@
-﻿import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom'
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom'
 import { Globe2, ShieldCheck, ShoppingBag, LogOut, User } from 'lucide-react'
 import { useState } from 'react'
 import { useStore } from '../../context/StoreContext'
@@ -24,7 +24,7 @@ function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3">
           <img
-            src="/pizza-store-20260410/brand-logo.jpeg"
+            src={`${import.meta.env.BASE_URL}brand-logo.jpeg`}
             alt="Pub's Pizza logo"
             className="h-14 w-14 rounded-2xl object-cover shadow-[0_10px_30px_rgba(255,122,0,0.25)]"
           />
